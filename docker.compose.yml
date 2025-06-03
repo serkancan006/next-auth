@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_SECRET=your-random-secret
+      - AUTH0_CLIENT_ID=DjwLQ8FU4jOzvm5cj1rkTLiVj1GJAGIW
+      - AUTH0_CLIENT_SECRET=sJ_ihCAGf5uU9KJ8OfY6VlVyXJ53XpOSgEnPErPIf6d4xam3YFLKx0wlFBe6LVNz
+      - AUTH0_ISSUER=https://dev-cuptjdnrmohanmcc.eu.auth0.com
+      - AUTH0_AUDIENCE=https://next-auth-api.example.com
